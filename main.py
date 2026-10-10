@@ -37,7 +37,7 @@ def check_expirations():
 
   for item in items:
     try:
-      end_date = datetime.strptime(item["end_date"].replace("/", "-"),, "%Y-%m-%d").date()
+      end_date = datetime.strptime(item["end_date"].replace("/", "-"), "%Y-%m-%d").date()
       days_left = (end_date - today).days
 
       # Điều kiện: Còn từ 0 đến 5 ngày là sẽ gửi cảnh báo
